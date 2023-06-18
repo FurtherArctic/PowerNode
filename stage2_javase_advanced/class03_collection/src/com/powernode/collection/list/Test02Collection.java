@@ -1,4 +1,4 @@
-package com.powernode.collection;
+package com.powernode.collection.list;
 
 import java.util.ArrayList;
 import java.util.Collection;

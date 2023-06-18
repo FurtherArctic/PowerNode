@@ -1,4 +1,4 @@
-package com.powernode.collection;
+package com.powernode.collection.list;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -51,6 +51,8 @@ public class Test05List {
 
         System.out.println("================================================");
         System.out.println(list);
+
+        list.clear();
         //匿名内部类
         list.sort(new Comparator<String>() {
             //排序规则：o1>o2方法返回负数, o1=o2方法返回0, o1<o2方法返回正数,在排序时对应降序
