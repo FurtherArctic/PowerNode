@@ -1,0 +1,5 @@
+PrintStream打印字节流的print方法打印完后不换行,PrintSTream的println方法打印完后会换行
+java.io.UnsupportedEncodingException: adsjlkdfjldfasj
+	at java.base/java.lang.String.lookupCharset(String.java:819)
+	at java.base/java.lang.String.getBytes(String.java:1763)
+	at com.powernode.filestream.Test06PrintStream.main(Test06PrintStream.java:19)
