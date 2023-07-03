@@ -55,8 +55,8 @@ public class Person implements Serializable {
 }
 
 class Pet implements Serializable {
-    //@Serial
-    //private static final long serialVersionUID = -6960825477052520783L;
+    @Serial
+    private static final long serialVersionUID = -6960825477052520783L;
     String nickname;
 
     public Pet(String nickname) {
