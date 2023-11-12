@@ -8,7 +8,7 @@ public class EmpDao {
     public PreparedStatement ps;
 
     public int deleteEmp(int deptNo) throws Exception {
-        String sql = "DELETE FROM emp where deptNo=?";
+        String sql = "DELETE FROM EMP where deptNo=?";
         int result;
         try {
             ps = JdbcUtil.getPreparedStatement(sql);

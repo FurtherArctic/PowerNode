@@ -12,14 +12,14 @@ import java.util.Scanner;
  */
 public class Client06BatchProcess {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        String sql = "insert into dept values (?,?,?)";
+        String sql = "insert into DEPT values (?,?,?)";
         PreparedStatement ps;
         Connection conn;
         int deptNum;
         String deptNo, deptName, deptLocation;
         String username = "root";
         String password = "123456";
-        String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+        String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("请输入需要添加的部门个数：");

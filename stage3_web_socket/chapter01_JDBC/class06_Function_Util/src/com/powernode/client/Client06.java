@@ -3,7 +3,6 @@ package com.powernode.client;
 import com.powernode.dao.DeptDao;
 import com.powernode.entity.Dept;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 

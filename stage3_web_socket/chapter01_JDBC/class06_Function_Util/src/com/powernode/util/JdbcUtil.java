@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 public class JdbcUtil {
     private static final String username = "root";
     private static final String password = "123456";
-    private static final String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+    private static final String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
 
     private static Connection conn;
     private static PreparedStatement ps;

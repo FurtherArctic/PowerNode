@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class DeptDao {
     public static String username = "root";
     public static String password = "123456";
-    public static String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+    public static String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
 
     public Connection conn;
     public PreparedStatement ps;
@@ -29,7 +29,7 @@ public class DeptDao {
      */
     public int insertDept(int deptNo, String deptName, String loc) throws Exception {
 
-        String sql = "INSERT INTO dept values (?,?,?)";
+        String sql = "INSERT INTO DEPT values (?,?,?)";
         int result;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -59,7 +59,7 @@ public class DeptDao {
      */
     public int deleteDao(int deptNo) throws Exception {
 
-        String sql = "delete from dept where DEPTNO=?";
+        String sql = "delete from DEPT where DEPTNO=?";
         int result;
 
         try {
@@ -92,7 +92,7 @@ public class DeptDao {
      */
     public int updateDao(int deptNo, String deptName, String loc) throws Exception {
 
-        String sql = "update  dept set DNAME=?,LOC=? where DEPTNO=?";
+        String sql = "update  DEPT set DNAME=?,LOC=? where DEPTNO=?";
         int result;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -18,7 +18,7 @@ public class Client02Mutual {
         Connection conn;
         String username = "root";
         String password = "123456";
-        String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+        String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
         Scanner sc = new Scanner(System.in);
         System.out.println("please enter the deptNo:");
         deptNo = sc.next();
@@ -27,7 +27,7 @@ public class Client02Mutual {
         System.out.println("please enter the location:");
         location = sc.next();
 
-        sql = "update dept set dName='" + deptName + "',loc='" + location + "' where deptNo='" + deptNo + "'";
+        sql = "update DEPT set dName='" + deptName + "',loc='" + location + "' where deptNo='" + deptNo + "'";
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url, username, password);
         ps = conn.prepareCall(sql);

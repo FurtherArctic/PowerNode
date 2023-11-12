@@ -24,12 +24,12 @@ public class Client03Precompilation {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         int result;
         String deptNo, deptName, location;
-        String sql = "update dept set dname=?,loc=? where DEPTNO=?";
+        String sql = "update DEPT set dname=?,loc=? where DEPTNO=?";
         PreparedStatement ps;
         Connection conn;
         String username = "root";
         String password = "123456";
-        String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+        String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
         Scanner sc = new Scanner(System.in);
         System.out.println("please enter the deptNo:");
         deptNo = sc.next();

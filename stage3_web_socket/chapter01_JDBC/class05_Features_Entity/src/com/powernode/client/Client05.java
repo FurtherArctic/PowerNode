@@ -3,7 +3,6 @@ package com.powernode.client;
 import com.powernode.dao.DeptDao;
 import com.powernode.entity.Dept;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -66,8 +65,7 @@ public class Client05 {
                 System.out.println("show all information");
                 try {
                     List<Dept> deptList = deptDao.findAll();
-                    for (Iterator<Dept> iterator = deptList.iterator(); iterator.hasNext(); ) {
-                        Dept dept = iterator.next();
+                    for (Dept dept : deptList) {
                         System.out.println(dept);
                     }
 

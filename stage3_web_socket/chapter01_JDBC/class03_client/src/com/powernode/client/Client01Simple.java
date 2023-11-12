@@ -12,10 +12,10 @@ import java.sql.SQLException;
 public class Client01Simple {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         int result;
-        String sql = "insert into dept values(106,'培训部门','上海')";
+        String sql = "insert into DEPT values(110,'培训部门','上海')";
         String user = "root";
         String password = "123456";
-        String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+        String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
         Connection conn;
         PreparedStatement ps;
         //JDBC步骤

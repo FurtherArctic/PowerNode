@@ -28,7 +28,7 @@ public class DeptDao {
      * @throws SQLException           异常
      */
     public int insertDept(Dept dept) throws Exception {
-        String sql = "INSERT INTO dept values (?,?,?)";
+        String sql = "INSERT INTO DEPT values (?,?,?)";
         int result;
         try {
             ps = JdbcUtil.getPreparedStatement(sql);
@@ -50,7 +50,7 @@ public class DeptDao {
      * @throws Exception 异常
      */
     public int deleteDao(int deptNo) throws Exception {
-        String sql = "delete from dept where DEPTNO=?";
+        String sql = "delete from DEPT where DEPTNO=?";
         int result;
         try {
             ps = JdbcUtil.getPreparedStatement(sql);
@@ -70,7 +70,7 @@ public class DeptDao {
      * @throws Exception 异常
      */
     public int updateDao(Dept dept) throws Exception {
-        String sql = "update  dept set DNAME=?,LOC=? where DEPTNO=?";
+        String sql = "update  DEPT set DNAME=?,LOC=? where DEPTNO=?";
         int result;
         try {
 
@@ -94,7 +94,7 @@ public class DeptDao {
     public List<Dept> findAll() throws Exception {
         ResultSet rs = null;
         List<Dept> deptList = new ArrayList<Dept>();
-        String sql = "select * from dept";
+        String sql = "select * from DEPT";
 
         try {
             ps = JdbcUtil.getPreparedStatement(sql);

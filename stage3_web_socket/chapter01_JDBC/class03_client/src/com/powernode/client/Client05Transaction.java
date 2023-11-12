@@ -12,14 +12,14 @@ import java.sql.SQLException;
 public class Client05Transaction {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         //解散某个部门
-        String sql1 = "delete from emp where DEPTNO=?";
-        String sql2 = "delete from dept where DEPTNO=?";
+        String sql1 = "delete from EMP where DEPTNO=?";
+        String sql2 = "delete from DEPT where DEPTNO=?";
 
         PreparedStatement ps1, ps2;
         Connection conn;
         String username = "root";
         String password = "123456";
-        String url = "jdbc:mysql://192.168.0.107:3306/power_node?serverTimezone=UTC";
+        String url = "jdbc:mysql://192.168.0.100:3306/power_node?serverTimezone=UTC";
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url, username, password);
