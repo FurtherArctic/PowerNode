@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select下拉列表标签</title>
+</head>
+<body>
+<form action="https://www.baidu.com" method="get">
+    <!--br表示换行-->
+    <label>
+        姓名:<input type="text" name="username"/><br/>
+        密码:<input type="password" name="pwd"/><br/>
+        照片:<input type="file" name="image"/><br/>
+        性别:<input type="radio" name="gender" value="man"/>男
+        <input type="radio" name="gender" value="woman"/>女<br/>
+        特长:<input type="checkbox" name="hobby" value="sing"/>唱歌
+        <input type="checkbox" name="hobby" value="dance"/>跳舞
+        <input type="checkbox" name="hobby" value="rap"/>RAP
+        <input type="checkbox" name="hobby" value="basketball"/>打篮球<br/>
+        籍贯:
+        <select name="home">
+            <option value="SD">山东</option>
+            <option value="HB">和北</option>
+            <option value="TJ">天津</option>
+            <option value="BJ">北京</option>
+            <option value="HN">河南</option>
+        </select><br/>
+        详细地址:
+        <textarea name="detail"></textarea><br/>
+    </label>
+    <input type="submit" value="百度"/>
+    <input type="reset" value="重置"/>
+    <input type="button" value="提示信息">
+</form>
+</body>
+</html>

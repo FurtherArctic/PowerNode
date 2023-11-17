@@ -1,0 +1,1 @@
+two     of the  following   options     are available   for the following       options in  the configuration       file    and the configuration   file    will    be automatically        loaded  when    the configuration file is   loaded

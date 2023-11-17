@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>规则</title>
+</head>
+<body>
+<label>
+    年龄:
+    <input type="text" name="user"/>
+</label><br/>
+<form action="https://www.baidu.com">
+    <label>
+        姓名:
+        <!--表单域标签只有声明name值才能作为参数提交-->
+        <input type="text"/><br/>
+    </label>
+    <input type="submit" value="百度"/>
+</form>
+<br/><br/>
+<!--表单标签不能为浏览器提供请求地址,此地址是由表单域标签整合后使用的,因此地址中的age=22是不会写入到请求地址中的-->
+<form action="https://www.baidu.com?age=22">
+    <label>
+        姓名:
+        <input type="text" name="user"/>
+    </label>
+    <input type="submit">
+</form>
+</body>
+</html>
