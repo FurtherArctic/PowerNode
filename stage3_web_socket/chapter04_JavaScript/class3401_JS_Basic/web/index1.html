@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS基础</title>
+    <!--JavaScript通常写在head标签里面,当浏览器编译到script标签时,type="text/javascript"属性会告诉浏览器script标签内部放置的为文本数据text和JavaScript命令, 此时浏览器会使用JS编译器编译JS命令, 等到script标签中的命令编译执行完毕后, 浏览器会切换回HTML编译器继续编译之后的命令-->
+    <script type="text/javascript">
+        //单行注释
+        /*
+         * 多行注释
+         * window对象指向接收当前html文件的浏览器窗口
+         * alert("")是window对象的函数,用于弹出一个对话框
+         */
+        //window.alert("Hello World");
+        let num1 = 123;
+        let num2 = 321;
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+    //可以直接调用上一个script标签中的变量
+    let num3 = num1 + num2;
+    window.alert(num3);
+</script>
+</body>
+</html>

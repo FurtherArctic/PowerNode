@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script</title>
+    <script src="one.js">
+        /*
+         * 1. 浏览器会根据src中的地址发起请求, 所要one.js文件
+         * 2. 当浏览器定位到one.js文件后, 会接收one.js文件的内容覆盖到当前script标签内部
+         *    此时script标签内原有的JS命令将不会再编译执行
+         * 3. 浏览器会根据type属性使用JavaScript编译器对得到的命令进行编译和执行
+         */
+        window.alert(43423);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
