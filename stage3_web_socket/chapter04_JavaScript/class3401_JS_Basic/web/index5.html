@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型</title>
+    <script>
+        let num1 = 12; // number
+        let num2 = 12.4; // number
+        console.log("num1的值是:" + num1 + ", 数据类型是:" + typeof num1);
+        console.log("num2的值是:" + num2 + ", 数据类型是:" + typeof num2);
+
+        let s1 = "wang"; // string
+        let s2 = 'mike'; // string
+        console.log("s1的值是:" + s1 + ", 数据类型是:" + typeof s1);
+        console.log("s2的值是:" + s2 + ", 数据类型是:" + typeof s2);
+
+        let b1 = true; // boolean
+        let b2 = false; // boolean
+        console.log("b1的值是:" + b1 + ", 数据类型是:" + typeof b1);
+        console.log("b2的值是:" + b2 + ", 数据类型是:" + typeof b2);
+
+        let o1 = new Date(); //object
+        //JS中的数组类似于java中的集合,同一个数组可以存放不同类型的数据
+        let o2 = ["12", "23", 4544, new Date()]; //object
+        console.log("o1的值是:" + o1 + ", 数据类型是:" + typeof o1);
+        console.log("o2的值是:" + o2 + ", 数据类型是:" + typeof o2);
+
+
+        //JS中函数声明方式有以下两种
+        //函数f1
+        let f1 = function () {
+            console.log("f1是没有参数的函数");
+        };
+
+        //函数f2
+        function f2(n1, n2) {
+            console.log("f2是对两个参数求积的函数");
+            console.log(n1 * n2)
+        }
+
+        console.log("f1的值是:" + f1 + ", 数据类型是:" + typeof f1);
+        console.log("f2的值是:" + f2 + ", 数据类型是:" + typeof f2);
+        f1();
+        f2(13, 67); // 871
+
+        let l1 = 12;
+        console.log("l1的值是:" + l1 + ", 数据类型是:" + typeof l1); //number
+
+        l1 = 'hello';
+        console.log("l1的值是:" + l1 + ", 数据类型是:" + typeof l1); //string
+
+        l1 = new Date();
+        console.log("l1的值是:" + l1 + ", 数据类型是:" + typeof l1); //object
+    </script>
+</head>
+<body>
+
+</body>
+</html>

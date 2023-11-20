@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript数组</title>
+    <script>
+        //数组两种声明格式
+        let arr1 = new Array();
+        let arr2 = [];
+
+        //数组中添加元素
+        arr1.push(11);
+        arr1.push("123");
+        arr1.push(new Date());
+        arr1.push(true);
+
+        //添加顺序逆序弹出元素,并返回
+        console.log(arr1.pop());
+
+        //遍历数组
+        for (let i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
