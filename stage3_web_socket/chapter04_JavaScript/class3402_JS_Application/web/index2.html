@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document通过name获取DOM对象</title>
+    <script>
+        function fun1() {
+            const domList = document.getElementsByName("mike");
+            for (let i = 0; i < domList.length; i++) {
+                let dom = domList[i];
+                const data = dom.innerHTML;
+                console.log("展示数据为" + data + "的标签是name=mike的标签");
+            }
+        }
+
+        function fun2() {
+            const domList = document.getElementsByTagName("div");
+            for (let i = 0; i < domList.length; i++) {
+                let dom = domList[i];
+                const data = dom.innerHTML;
+                console.log("展示数据为" + data + "的div标签");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="one" name='mike'>100</div>
+<div id="two">200</div>
+<div id="three" name='mike'>300</div>
+<div id="four">400</div>
+<input type="button" value="让浏览器告诉你,谁是name等于mike的标签" onclick="window.fun1()"/><br/>
+<input type="button" value="让浏览器告诉你,谁是div标签" onclick="window.fun2()"/><br/>
+</body>
+</html>

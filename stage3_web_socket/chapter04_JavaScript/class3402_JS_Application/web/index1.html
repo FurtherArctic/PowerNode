@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document通过id获取DOM对象</title>
+    <script id="1">
+        function fun1() {
+            const element1 = document.getElementById("1");
+            const element2 = document.getElementById("2");
+            const element3 = document.getElementById("t1");
+            const element4 = document.getElementById("td1");
+            const elementArray = document.getElementsByTagName("td");
+            console.log(element1);
+            console.log(element2);
+            console.log(element3);
+            console.log(element4);
+            for (let i = 0; i < elementArray.length; i++) {
+                console.log(elementArray[i]);
+            }
+        }
+
+        function fun2() {
+            //1.通过document得到管理id=two的标签的DOM对象
+            let dom = document.getElementById("two");
+            //2.要求dom对象读取其管理的标签的提示信息
+            let data = dom.innerHTML;
+            //3.浏览器回复用户
+            window.alert("展示数据为" + data + "的标签，它就是id=two的标签");
+        }
+        fun2();
+    </script>
+</head>
+<body id="2">
+<table border="2" id="t1">
+    <tr>
+        <td id="td1-1">姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+    </tr>
+    <tr>
+        <td id="2-1">Apple</td>
+        <td>45</td>
+        <td>男</td>
+    </tr>
+    <tr>
+        <td>Google</td>
+        <td>23</td>
+        <td id="td3-3">女</td>
+    </tr>
+</table>
+<input type="button" value="b1" onclick="fun1()"><br/>
+<input type="button" value="b2" onclick="window.fun1()"><br/>
+
+<div id="one">100</div>
+<div id="two">200</div>
+<div id="three">300</div>
+<input type="button" value="让浏览器告诉你,谁是id等于two的标签" onclick="window.fun2()"/>
+</body>
+</html>

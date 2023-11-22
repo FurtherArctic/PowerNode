@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom操作checked属性</title>
+    <script type="text/javascript">
+        function fun1() {
+            //1. 获取标题行checkbox的checked的值
+            let flag = document.getElementById("one").checked;
+            //2. 定位所有数据行checkbox的dom对象
+            let domList = document.getElementsByName("ck");
+            //3. 为每一个数据行checkbox的checked属性赋值
+            for (let i = 0; i < domList.length; i++) {
+                domList[i].checked = flag;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<table border=2 align="center">
+    <tr>
+        <td>
+            <input type="checkbox" id="one" onclick="window.fun1()"><label for="one">全选与全不选</label>
+        </td>
+        <td>部门编号</td>
+        <td>部门名称</td>
+        <td>部门位置</td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input type="checkbox" name="ck">
+            </label>
+        </td>
+        <td>10</td>
+        <td>Accounting</td>
+        <td>NewYork</td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input type="checkbox" name="ck">
+            </label>
+        </td>
+        <td>20</td>
+        <td>Sales</td>
+        <td>Boston</td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input type="checkbox" name="ck">
+            </label>
+        </td>
+        <td>30</td>
+        <td>operation</td>
+        <td>daSing</td>
+    </tr>
+</table>
+</body>
+</html>

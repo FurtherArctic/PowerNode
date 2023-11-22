@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom操作样式属性</title>
+    <script>
+        function updateColor(color) {
+            //获取标签dom
+            let dom = document.getElementById("one");
+            //样式属性赋值
+            dom.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+<center>
+    <form>
+        <div id="one" style="background-color: black;width: 100px;height: 100px"></div>
+        <label>
+            <input type="radio" name="color" onclick="updateColor('red')"/>红
+            <input type="radio" name="color" onclick="updateColor('green')"/>绿
+            <input type="radio" name="color" onclick="updateColor('yellow')"/>黄
+            <input type="reset" onclick="updateColor('black')"/>
+        </label>
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onmouseout和onmouseover监听</title>
+    <script>
+        function fun1() {
+            //dom.style.样式属性名 = 值
+            //this:表示触发当前函数运行的标签的DOM对象
+            this.style.backgroundColor = 'red';
+        }
+
+        function fun2() {
+            this.style.backgroundColor = 'white';
+        }
+    </script>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <td>部门编号</td>
+        <td>部门名称</td>
+        <td>部门位置</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+</table>
+<script>
+    //1.获得所有tr标签所关联的DOM对象
+    const domArray = document.getElementsByTagName("tr");
+    //2.通过DOM为数据行上onmouseover指定处理函数
+    for (let i = 1; i < domArray.length; i++) {
+        const trDom = domArray[i];
+        trDom.onmouseover = fun1;  //切记，切记，切记 书写处理函数名，不要带小括号
+        trDom.onmouseout = fun2;
+        //trDom.onmouseover=fun1(); 这时一个错误格式
+    }
+</script>
+</body>
+</html>

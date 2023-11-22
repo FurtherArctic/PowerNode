@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange监听事件</title>
+    <script>
+        function fun1() {
+            let cityList = [
+                {"cid": 10, "cname": "廊坊市", "pid": 1},
+                {"cid": 20, "cname": "唐山市", "pid": 1},
+                {"cid": 30, "cname": "邯郸市", "pid": 1},
+                {"cid": 40, "cname": "郑州市", "pid": 2},
+                {"cid": 50, "cname": "许昌市", "pid": 2}
+            ];
+            let dom1 = document.getElementById("province");
+            let data = dom1.value;
+            let str = '';
+            for (let i = 0; i < cityList.length; i++) {
+                if (cityList[i].pid == data) {
+                    str += "<option value='" + cityList[i].cid + "'>" + cityList[i].cname + "</option>";
+                }
+            }
+            document.getElementById("city").innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+<div style="text-align: center;">
+    <label for="province">省份:</label>
+    <select id="province" onchange="window.fun1()">
+        <option value="0">请选择</option>
+        <option value="1">河北省</option>
+        <option value="2">河南省</option>
+    </select><br/>
+    <label for="city">城市:</label>
+    <select id="city">
+        <option value="0">请选择</option>
+    </select>
+</div>
+</body>
+</html>

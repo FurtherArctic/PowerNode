@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onmouseout和onmouseover监听</title>
+    <script>
+        function fun1(dom) {
+            //dom.style.样式属性名 = 值
+            //this:表示触发当前函数运行的标签的DOM对象
+            dom.style.backgroundColor = 'red';
+        }
+
+        function fun2(dom) {
+            dom.style.backgroundColor = 'white';
+        }
+
+        var domArray = document.getElementsByTagName("tr");
+        for (var i = 0; i < domArray.length; i++) {
+            var trDom = domArray[i];
+            trDom.onmouseover = fun1;  //切记，切记，切记 书写处理函数名，不要带小括号
+            //trDom.onmouseover=fun1(); 这时一个错误格式
+        }
+    </script>
+</head>
+<body>
+<table align="center" border="2">
+    <tr>
+        <td>部门编号</td>
+        <td>部门名称</td>
+        <td>部门位置</td>
+    </tr>
+    <tr onmouseover="fun1(this)" onmouseout="fun2(this)">
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr onmouseover="fun1(this)" onmouseout="fun2(this)">
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+    <tr onmouseover="fun1(this)" onmouseout="fun2(this)">
+        <td>10</td>
+        <td>dept_10</td>
+        <td>xxxxxxxx</td>
+    </tr>
+
+
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘监听事件</title>
+    <script>
+        function fun1() {
+            let array = ["abc", "abcd", "abcdef", "apple", "abandon", "google", "go", "gross"];
+            //1. 获得用户在文本框中输入的内容
+            let dom1 = document.getElementById("one");
+            let data = dom1.value;
+            //2. 到数组中定位以输入内容为开头的字符串
+            let str = '';
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].indexOf(data) === 0) {
+                    str += array[i] + "<br/>";
+                }
+            }
+            //3. 将字符串写入到div中
+            let dom2 = document.getElementById("two");
+            dom2.innerHTML = str;
+            //4. 决定div是否可见
+            if (data === "" || str === '') {
+                dom2.style.display = "none";
+            } else {
+                dom2.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+<!--<center>-->
+<label for="one">
+    <input type="text" id="one" style="width: 600px;height: 40px;border: solid blue 1px" onkeyup="fun1()"/>
+</label>
+<div id="two" style="width: 600px;height:500px;border: solid blue 1px;display: none"></div>
+<!--</center>-->
+</body>
+</html>

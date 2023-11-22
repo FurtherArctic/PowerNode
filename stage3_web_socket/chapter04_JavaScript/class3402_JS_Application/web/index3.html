@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作标签</title>
+    <script>
+        function add() {
+            //获取数字1,数字2,计算结果标签的dom对象
+            const dom1 = document.getElementById("one");
+            const dom2 = document.getElementById("two");
+            const dom3 = document.getElementById("three");
+            //运算服务, dom标签的value属性值都是string类型,需要使用window.parseInt()函数转为number类型
+            let result = window.parseInt(dom1.value) + window.parseInt(dom2.value);
+            //为计算结果标签的value属性赋值
+            dom3.value = result;
+        }
+
+        function multiplication() {
+            const dom1 = document.getElementById("one");
+            const dom2 = document.getElementById("two");
+            const dom3 = document.getElementById("three");
+            let result = window.parseInt(dom1.value) + window.parseInt(dom2.value);
+            dom3.value = result;
+        }
+    </script>
+</head>
+<body>
+<table border=2 align="center">
+    <tr>
+        <td>数字1</td>
+        <td><label for="one"></label><input type="text" id="one"></td>
+    </tr>
+    <tr>
+        <td>数字2</td>
+        <td><label for="two"></label><input type="text" id="two"></td>
+    </tr>
+    <tr>
+        <td>结果</td>
+        <td><label for="three"></label><input type="text" id="three"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="加法运算值" onclick="add()"></td>
+        <td><input type="button" value="乘法运算值" onclick="multiplication()"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onblur和onfocus</title>
+    <script>
+        function fun1() {
+            //获得密码框的输入内容
+            let dom1 = document.getElementById("one");
+            let dom2 = document.getElementById("one_font");
+            let pwd = dom1.value;
+            //判断
+            if (pwd === "") {
+                //focus()让当前标签获得光标
+                dom1.focus();
+                dom2.innerHTML = "请先输入密码";
+            } else {
+                dom2.innerHTML = "*";
+            }
+        }
+
+        function fun2() {
+            let dom3 = document.getElementById("one");
+            let dom4 = document.getElementById("two");
+            let dom5 = document.getElementById("two_font");
+            let pwd1 = dom3.value;
+            let pwd2 = dom4.value;
+            if (pwd1 !== pwd2) {
+                document.getElementById("two").focus();
+                dom5.innerHTML = "两次输入密码不一致";
+            } else {
+                dom5.innerHTML = "*";
+            }
+        }
+    </script>
+</head>
+<body>
+<center>
+    <table border="2">
+        <tr>
+            <td>用户名</td>
+            <td>
+                <label>
+                    <input type="text">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                <label for="one"></label>
+                <input type="password" id="one">
+                <font style="color:red" id="one_font">*</font>
+            </td>
+        </tr>
+        <tr>
+            <td>重复密码</td>
+            <td>
+                <label for="two"></label>
+                <input type="password" id="two" onfocus="window.fun1()" onblur="window.fun2()">
+                <font style="color:red" id="two_font">*</font>
+            </td>
+        </tr>
+        <tr>
+            <td>用户邮箱</td>
+            <td>
+                <label>
+                    <input type="text">
+                </label>
+            </td>
+        </tr>
+
+    </table>
+</center>
+</body>
+</html>
